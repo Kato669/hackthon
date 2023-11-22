@@ -6,7 +6,7 @@
             <div class="row text">
                 <h3>Assemble your crew. Prime your engines. Go for launch.</h3>
                 <h1 class="pt-3">HailNumbers Calligraphy Visualization Challenge</h1>
-                <h4 class="pt-3">The art of Calligraphy | NOV 8 – DEC 10</h4>
+                <h4 class="pt-3">The art of Calligraphy | NOV 8 – DEC 31</h4>
                 <!-- <button></button> -->
                 <a href="started.php" class="mt-3 btn btn-primary">Get Started</a>
             </div>
