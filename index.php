@@ -9,6 +9,8 @@
                 <h4 class="pt-3">The art of Calligraphy | NOV 8 – DEC 31</h4>
                 <!-- <button></button> -->
                 <a href="started.php" class="mt-3 btn btn-primary">Get Started</a>
+                
+                <p><a href="admin/login.php" class="btn btn-success mt-5">Login | Admin</a></p>
             </div>
         </div>
     </main>
