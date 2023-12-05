@@ -1,4 +1,10 @@
  <?php include('../partials/constants.php') ?>
+<?php
+if (!isset($_SESSION['user'])) {
+    $_SESSION['login'] = "Please login";
+    header("Location: login.php");
+}
+?>
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
  <!-- dtablesata -->
@@ -27,6 +33,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php">Frontend</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.php">Logout</a>
                 </li>
         </div>
     </div>

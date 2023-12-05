@@ -1,5 +1,19 @@
 <?php include('constants.php') ?>
-
+<style>
+    .password_change{
+        position: absolute;
+        color: green;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        text-align: center;
+        left: 50%;
+        transition: all 1s;
+        transform: translateY(-2000%);
+    }
+    .password_change.active{
+        transform: translateY(0%);
+    }
+</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
 <!-- <link rel="stylesheet" href="../toarst/toastr.min.css"> -->
@@ -16,7 +30,14 @@
 </div>
 
 
-
+<h4 class="password_change " id="password_change">
+    <?php
+        if(isset($_SESSION['password_changed'])){
+            echo $_SESSION['password_changed'];
+            unset($_SESSION['password_changed']);
+        }
+    ?>
+</h4>
 
 
 <!-- Modal -->
@@ -99,7 +120,7 @@
                                     <td>
                                         <a href="edit_admin.php?id=<?php echo $id ?>" class="btn btn-primary btn-small">Edit</a>
                                         <a href="delete_admin.php?id=<?php echo $id ?>" class="btn btn-danger btn-small">Delete</a>
-                                        <a href="#" class="btn btn-info btn-small">Change Password</a>
+                                        <a href="change_password.php?id=<?php echo $id ?>" class="btn btn-info btn-small">Change Password</a>
                                     </td>
 
                                 </tr>
@@ -159,6 +180,13 @@ if(isset($_POST['submit'])) {
 };
 
 ?>
+
+<script>
+    let password_changed =document.getElementById('password_changed');
+    window.addEventListener('load',()=>{
+        password_changed.classList.toggle('active');
+    })
+</script>
 <!-- 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../toarst/toastr.min.js"></script>
